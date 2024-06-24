@@ -1,3 +1,9 @@
+# Upload jasen ouput to bonsai
+
+## Upload command
+
+./scripts/upload_sample.py --api http://172.22.159.67:8001 -u admin -p admin --input /home/halfdan/projects/run_jasen/out/exemple2.yml
+
 ## example2.yml
 ``` 
 group_id: saureus
