@@ -4,6 +4,16 @@
 
 ./scripts/upload_sample.py --api http://172.22.159.67:8001 -u admin -p admin --input /home/halfdan/projects/run_jasen/out/exemple2.yml
 
+## Error msg
+
+```
+./scripts/upload_sample.py --api http://172.22.159.67:8001 -u admin -p admin --input /home/halfdan/projects/run_jasen/out/exemple2.yml
+Usage: upload_sample.py [OPTIONS]
+Try 'upload_sample.py --help' for help.
+
+Error: An unknown error occurred; 422 Client Error: Unprocessable Entity for url: http://172.22.159.67:8001/samples/
+```
+
 ## example2.yml
 ``` 
 group_id: saureus
