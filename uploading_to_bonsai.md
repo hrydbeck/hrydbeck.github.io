@@ -1,4 +1,4 @@
-# Upload jasen ouput to bonsai
+# Upload jasen output to bonsai
 
 ## Upload command
 
