@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Honnörsgatan14.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="bakgrund-honn%C3%B6rsgatan-14">Bakgrund Honnörsgatan 14</h1>
+<ul>
+<li><a href="https://www.hemnet.se/bostad/lagenhet-3rum-sodra-ekkallan-linkopings-kommun-honnorsgatan-14-21278660?utm_source=ios_app&amp;utm_medium=link&amp;utm_campaign=tipsa&amp;utm_content=iphone">Hemnet annons</a></li>
+<li><a href="https://mspecsfiles2.blob.core.windows.net/0303/files/94901990-c8cc-11ef-9514-6753fa937e94.pdf">Årsrapport</a>
+Energiklass
+B
+Styrelseorförande Arben Pepi (inte skriven på adressen?) (Ända hittat kontaktmöjlighet möjligen via LinkedIn)</li>
+</ul>
+<h2 id="ekonomi">Ekonomi</h2>
+<h3 id="fler%C3%A5rs%C3%B6versikt">Flerårsöversikt</h3>
+<table>
+<thead>
+<tr>
+<th>Flerårsöversikt (Tkr)</th>
+<th>2023</th>
+<th>2022</th>
+<th>2021</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nettoomsättning</td>
+<td>3561</td>
+<td>3054</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Resultat efter finansiella poster</td>
+<td>-961</td>
+<td>-727</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Soliditet(a)</td>
+<td>72,4</td>
+<td>72,4</td>
+<td>67</td>
+</tr>
+<tr>
+<td>Årsavgift per kvm upplåten med bostadsrätt (kr)</td>
+<td>797</td>
+<td>725</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Skuldsättning per kvm (kr)</td>
+<td>13 349</td>
+<td>13 488</td>
+<td>13 668</td>
+</tr>
+<tr>
+<td>Skuldsättning per kvm upplåten med bostadsrätt (kr)</td>
+<td>13 349</td>
+<td>13 488</td>
+<td>13 668</td>
+</tr>
+<tr>
+<td>Sparande per kvm (kr)</td>
+<td>148</td>
+<td>213</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Räntekänslighet (%)</td>
+<td>16,7</td>
+<td>18,6</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Energikostnad per kvm (kr)</td>
+<td>166</td>
+<td>162</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Årsavgifternas andel i a av totala rörelseintäkter</td>
+<td>80,8</td>
+<td>85,6</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="skulder-till-kreditinstitut">Skulder till kreditinstitut</h3>
+<table>
+<thead>
+<tr>
+<th>Skulder till kreditinstitut</th>
+<th>Långivare:Räntesats %</th>
+<th>Datum för ränteändring</th>
+<th>Lånebelopp 2023-12-31</th>
+<th>Lånebelopp 2022-12-31</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Danske Bank</td>
+<td>1,86</td>
+<td>2024-12-30</td>
+<td>18 900 000</td>
+<td>19 100 000</td>
+</tr>
+<tr>
+<td>Danske Bank</td>
+<td>2,5</td>
+<td>2025-12-30</td>
+<td>14 850 000</td>
+<td>14 850 000</td>
+</tr>
+<tr>
+<td>Danske Bank</td>
+<td>2,19</td>
+<td>2026-12-30</td>
+<td>14 400 000</td>
+<td>14 700 000</td>
+</tr>
+<tr>
+<td>Avgår kortfristig del av lån</td>
+<td></td>
+<td></td>
+<td>-19 200 000</td>
+<td>-500 000</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>28 950 000</td>
+<td>48 150 000</td>
+</tr>
+</tbody>
+</table>
+<h2 id="underh%C3%A5llsplan">Underhållsplan</h2>
+<p>Föreningen har inte en aktuell underhållsplan.</p>
+<h2 id="yttre-fond">Yttre fond</h2>
+<p>Avsättning för föreningens fastighetsunderhåll skall enligt föreningens stadgar göras årligen med ett
+belopp motsvarande minst 30 kr/kvm BOA. Eftersom fastigheten är nybyggd finns <strong>inget underhåll
+planerat</strong> inom de närmaste åren.</p>
+<h2 id="m%C3%A5nadsavgift">Månadsavgift</h2>
+<p>4 419 kr
+Tillkommer gör obligatoriskt tillägg för tv och bredband 250 kr / mån.
+Hushållsel och varmvatten debiteras efter förbrukning.</p>
+<h3 id="driftskostnader">Driftskostnader</h3>
+<p>Driftskostnad 575 kr/månad
+Personer i hushållet 3 st
+Driftkostnad fördelas på
+Försäkring: 150 kr/månad
+Hushållsel: 275 kr/månad
+Varmvatten: 150 kr/månad</p>
+<h2 id="bostadsr%C3%A4ttsf%C3%B6rening">Bostadsrättsförening</h2>
+<p>Brf Tinnerbäcks Brunn, Hittar ingen kontaktinformation</p>
+<h2 id="parkering">Parkering</h2>
+<p>Parkeringsplatser kostar 450 kr. Dem har laddboxar och tillkommer rörligt pris på laddning. Kö
+Garageplats kostar 850 kr, men finns inga laddboxar. Kortare kö
+En elbil (ej laddhybrid) har företräde till laddplatser på kö listan. (2023-04-21).</p>
+
+</body>
+</html>
